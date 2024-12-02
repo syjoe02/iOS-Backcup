@@ -71,7 +71,7 @@ def get_creation_date(file_path):
 
         if exif_data:
             for tag, value in ExifTags.TAGS.items():
-                if value == "DateTimeOriginal":
+                if value == "DateTime":
                     date_taken = exif_data.get(tag)
                     if date_taken:
                         return datetime.strptime(date_taken, "%Y:%m:%d %H:%M:%S")
